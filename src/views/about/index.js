@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "react-bootstrap/image";
 import GioNavbar from "../../components/gionavbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faLinkedin,
 	faSpotify,
