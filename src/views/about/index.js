@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
 import GioNavbar from "../../components/gionavbar";
-import { Button } from "antd";
+import { Button, Typography } from "antd";
 import { Row } from "antd";
-import { Layout } from "antd";
+import { gold, blue } from "@ant-design/colors";
 import GioProfilePic from "./GioProfilePic.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,9 +16,22 @@ class AboutPage extends Component {
 		return (
 			<Fragment>
 				<GioNavbar></GioNavbar>
-				<Layout type="block" align="middle" padding="5px 0">
+				<div
+					align="middle"
+					style={{
+						display: "flex",
+						flexDirection: "column"
+					}}
+				>
 					<Row>
-						<div>Jorge Giovannetti</div>
+						<Typography>
+							<h1 style={{ color: gold.primary }}>Jorge Giovannetti</h1>
+						</Typography>
+					</Row>
+					<Row>
+						<Typography>
+							<h2 style={{ fontStyle: "italic" }}>Dev</h2>
+						</Typography>
 					</Row>
 					<Row>
 						<img
@@ -44,7 +57,12 @@ class AboutPage extends Component {
 							View Resume
 						</Button>
 					</Row>
-					<Row>
+					<Row
+						style={{
+							display: "flex",
+							justifyContent: "space-around"
+						}}
+					>
 						<Button
 							type="primary"
 							href="https://www.linkedin.com/in/jorgegiovannetti/"
@@ -79,7 +97,7 @@ class AboutPage extends Component {
 							Github
 						</Button>
 					</Row>
-				</Layout>
+				</div>
 			</Fragment>
 		);
 	}

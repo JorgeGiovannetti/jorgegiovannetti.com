@@ -14,6 +14,7 @@ class GioNavbar extends Component {
 				onClick={this.handleClick}
 				selectedKeys={[pathname]}
 				mode="horizontal"
+				style={{ lineHeight: "30px" }}
 			>
 				<Menu.Item key="/portfolio" style={{ float: "right" }}>
 					<Link to="/portfolio">Portfolio</Link>

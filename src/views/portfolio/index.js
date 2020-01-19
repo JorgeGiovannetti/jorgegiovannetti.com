@@ -5,7 +5,7 @@ class PortfolioPage extends Component {
 		return (
 			<Fragment>
 				<GioNavbar></GioNavbar>
-				<div>Under Construction</div>
+				<div align="middle">Under Construction</div>
 			</Fragment>
 		);
 	}
