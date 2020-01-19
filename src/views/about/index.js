@@ -2,8 +2,8 @@ import React, { Component, Fragment } from "react";
 import GioNavbar from "../../components/gionavbar";
 import { Button, Typography } from "antd";
 import { Row } from "antd";
-import { gold, blue } from "@ant-design/colors";
-import GioProfilePic from "./GioProfilePic.jpg";
+import { gold } from "@ant-design/colors";
+import GioProfilePic from "./GioProfilePicSmall.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faLinkedin,
@@ -47,7 +47,7 @@ class AboutPage extends Component {
 							development.
 						</div>
 					</Row>
-					<Row>
+					<Row style={{ marginTop: "10px", marginBottom: "10px" }}>
 						<Button
 							type="primary"
 							href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
@@ -92,6 +92,7 @@ class AboutPage extends Component {
 							variant="dark"
 							href="https://github.com/JorgeGiovannetti"
 							target="_blank"
+							rel="noopener"
 						>
 							<FontAwesomeIcon icon={faGithub} style={{ marginRight: "3px" }} />
 							Github
