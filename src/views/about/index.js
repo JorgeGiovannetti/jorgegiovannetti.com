@@ -3,7 +3,7 @@ import GioNavbar from "../../components/gionavbar";
 import { Button } from "antd";
 import { Row } from "antd";
 import { Layout } from "antd";
-import { Icon } from "antd";
+import GioProfilePic from "./GioProfilePic.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faLinkedin,
@@ -16,9 +16,23 @@ class AboutPage extends Component {
 		return (
 			<Fragment>
 				<GioNavbar></GioNavbar>
-				<Layout type="flex" align="middle">
+				<Layout type="block" align="middle" padding="5px 0">
 					<Row>
-						<Icon></Icon>
+						<div>Jorge Giovannetti</div>
+					</Row>
+					<Row>
+						<img
+							src={GioProfilePic}
+							style={{ borderRadius: "50%", width: "150px" }}
+							alt="Profile"
+						/>
+					</Row>
+					<Row>
+						<div>
+							2nd year CS student @ Tec de Monterrey. My main areas of interest
+							include computer graphics, artificial intelligence, UX, and web
+							development.
+						</div>
 					</Row>
 					<Row>
 						<Button
