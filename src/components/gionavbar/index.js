@@ -1,26 +1,29 @@
 import React, { Component } from "react";
-import Navbar from "react-bootstrap/navbar";
-import Nav from "react-bootstrap/nav";
+import { Menu } from "antd";
+import { Link, withRouter } from "react-router-dom";
 
 class GioNavbar extends Component {
 	render() {
+		const {
+			location: { pathname }
+		} = this.props;
+
 		return (
-			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-				<Navbar.Brand href="#about">Jorge Giovannetti</Navbar.Brand>
-				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="ml-auto">
-						<Nav.Link eventKey={1} href="/">
-							About Me
-						</Nav.Link>
-						<Nav.Link eventKey={2} href="#/portfolio">
-							Portfolio
-						</Nav.Link>
-					</Nav>
-				</Navbar.Collapse>
-			</Navbar>
+			<Menu
+				theme="dark"
+				onClick={this.handleClick}
+				selectedKeys={[pathname]}
+				mode="horizontal"
+			>
+				<Menu.Item key="/portfolio" style={{ float: "right" }}>
+					<Link to="/portfolio">Portfolio</Link>
+				</Menu.Item>
+				<Menu.Item key="/" style={{ float: "right" }}>
+					<Link to="/">About Me</Link>
+				</Menu.Item>
+			</Menu>
 		);
 	}
 }
 
-export default GioNavbar;
+export default withRouter(GioNavbar);
