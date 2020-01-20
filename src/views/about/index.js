@@ -1,6 +1,6 @@
 import React, { Component, Fragment, Suspense } from "react";
-import { Row, Col, Layout, Typography } from "antd";
-import GioNavbar from "../../components/gionavbar";
+import { Row, Layout, Typography } from "antd";
+// import GioNavbar from "../../components/gionavbar";
 // import { Button } from "antd";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {
@@ -20,28 +20,26 @@ class AboutPage extends Component {
 				<div
 					style={{
 						height: "100vh",
-						background: "#34495e",
+						background: "white",
 						paddingLeft: "10%",
 						paddingRight: "10%"
 					}}
 				>
-					<GioNavbar></GioNavbar>
-
-					<Content>
-						<Row>
-							<Col>
+					{/* <GioNavbar></GioNavbar> */}
+					<Layout>
+						<Content>
+							<Row>
 								<Title>Jorge Giovannetti</Title>
 								<Suspense fallback={<div>Loading...</div>}>
 									<GioProfilePic></GioProfilePic>
 								</Suspense>
-								<p style={{ color: "#8892b0" }}>
+								<p style={{ color: "#1e3799" }}>
 									2nd year CS student @ Tec de Monterrey. My main areas of
 									interest include computer graphics, artificial intelligence,
 									UX, and web development.
 								</p>
-							</Col>
-						</Row>
-						{/* <Row
+							</Row>
+							{/* <Row
 						style={{
 							display: "flex"
 						}}
@@ -81,7 +79,8 @@ class AboutPage extends Component {
 						Github
 						</Button>
 					</Row> */}
-					</Content>
+						</Content>
+					</Layout>
 				</div>
 			</Fragment>
 		);
