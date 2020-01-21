@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Button } from "antd";
+import { Menu } from "antd";
 import { Link, withRouter } from "react-router-dom";
 
 class GioNavbar extends Component {
@@ -16,16 +16,6 @@ class GioNavbar extends Component {
 				selectedKeys={[pathname]}
 				mode="horizontal"
 			>
-				<Button
-					style={{ float: "right" }}
-					size="large"
-					type="secondary"
-					href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
-					rel="noopener"
-					target="_blank"
-				>
-					Resume
-				</Button>
 				<Menu.Item key="/portfolio" style={{ float: "right" }}>
 					<Link to="/portfolio">Portfolio</Link>
 				</Menu.Item>
