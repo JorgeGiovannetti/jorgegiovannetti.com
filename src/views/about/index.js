@@ -1,13 +1,13 @@
 import React, { Component, Fragment, Suspense } from "react";
 import { Row, Col, PageHeader, Typography, Spin, Icon, Tabs } from "antd";
 // import GioNavbar from "../../components/gionavbar";
-// import { Button } from "antd";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-// 	faLinkedin,
-// 	faSpotify,
-// 	faGithub
-// } from "@fortawesome/free-brands-svg-icons";
+import { Button } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faLinkedin,
+	faSpotify,
+	faGithub
+} from "@fortawesome/free-brands-svg-icons";
 
 const GioProfilePic = React.lazy(() => import("./components/GioProfilePic"));
 const { Title } = Typography;
@@ -52,7 +52,7 @@ class AboutPage extends Component {
 					}}
 				>
 					<Title>Jorge Giovannetti</Title>
-					<Row>
+					<Row type="flex">
 						<Col span={12}>
 							<PageHeader title="About Me"></PageHeader>
 							<Paragraph>
@@ -67,46 +67,50 @@ class AboutPage extends Component {
 							</Suspense>
 						</Col>
 					</Row>
-					{/* <Row
-						style={{
-							display: "flex"
-						}}
-						>
+					<Row type="flex">
 						<Button
-						type="primary"
-						href="https://www.linkedin.com/in/jorgegiovannetti/"
-						rel="noopener"
-						target="_blank"
+							type="primary"
+							href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
+							rel="noopener"
+							target="_blank"
 						>
-						<FontAwesomeIcon
-						icon={faLinkedin}
-						style={{ marginRight: "3px" }}
-						/>
-						LinkedIn
+							Resume
 						</Button>
 						<Button
-						type="primary"
-						href="https://open.spotify.com/artist/3wcBGxsP5MCM5jUPQNoXWC"
-						rel="noopener"
-						target="_blank"
+							type="primary"
+							href="https://www.linkedin.com/in/jorgegiovannetti/"
+							rel="noopener"
+							target="_blank"
 						>
-						<FontAwesomeIcon
-						icon={faSpotify}
-						style={{ marginRight: "3px" }}
-						/>
-						Spotify
+							<FontAwesomeIcon
+								icon={faLinkedin}
+								style={{ marginRight: "3px" }}
+							/>
+							LinkedIn
 						</Button>
 						<Button
-						type="primary"
-						variant="dark"
-						href="https://github.com/JorgeGiovannetti"
-						target="_blank"
-						rel="noopener"
+							type="primary"
+							href="https://open.spotify.com/artist/3wcBGxsP5MCM5jUPQNoXWC"
+							rel="noopener"
+							target="_blank"
 						>
-						<FontAwesomeIcon icon={faGithub} style={{ marginRight: "3px" }} />
-						Github
+							<FontAwesomeIcon
+								icon={faSpotify}
+								style={{ marginRight: "3px" }}
+							/>
+							Spotify
 						</Button>
-					</Row> */}
+						<Button
+							type="primary"
+							variant="dark"
+							href="https://github.com/JorgeGiovannetti"
+							target="_blank"
+							rel="noopener"
+						>
+							<FontAwesomeIcon icon={faGithub} style={{ marginRight: "3px" }} />
+							Github
+						</Button>
+					</Row>
 					<div>
 						<PageHeader title="Work Experience"></PageHeader>
 						<Tabs tabPosition={tabPosition}>
