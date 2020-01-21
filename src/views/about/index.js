@@ -1,5 +1,5 @@
 import React, { Component, Fragment, Suspense } from "react";
-import { Row, Layout, Typography } from "antd";
+import { Row, PageHeader, Typography, Spin, Icon, Tabs } from "antd";
 // import GioNavbar from "../../components/gionavbar";
 // import { Button } from "antd";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,8 +10,33 @@ import { Row, Layout, Typography } from "antd";
 // } from "@fortawesome/free-brands-svg-icons";
 
 const GioProfilePic = React.lazy(() => import("./components/GioProfilePic"));
-const { Content } = Layout;
-const { Title } = Typography;
+const { Title, Text } = Typography;
+const { TabPane } = Tabs;
+const CustomSpin = (
+	<Spin
+		indicator={<Icon type="loading" style={{ fontSize: 24 }} spin />}
+	></Spin>
+);
+
+const { Paragraph } = Typography;
+
+const Content = ({ children, extraContent }) => {
+	return (
+		<Row className="content" type="flex">
+			<div className="main" style={{ flex: 1 }}>
+				{children}
+			</div>
+			<div
+				className="extra"
+				style={{
+					marginLeft: 80
+				}}
+			>
+				{extraContent}
+			</div>
+		</Row>
+	);
+};
 
 class AboutPage extends Component {
 	render() {
@@ -20,26 +45,22 @@ class AboutPage extends Component {
 				<div
 					style={{
 						height: "100vh",
-						background: "white",
 						paddingLeft: "10%",
 						paddingRight: "10%"
 					}}
 				>
-					{/* <GioNavbar></GioNavbar> */}
-					<Layout>
-						<Content>
-							<Row>
-								<Title>Jorge Giovannetti</Title>
-								<Suspense fallback={<div>Loading...</div>}>
-									<GioProfilePic></GioProfilePic>
-								</Suspense>
-								<p style={{ color: "#1e3799" }}>
-									2nd year CS student @ Tec de Monterrey. My main areas of
-									interest include computer graphics, artificial intelligence,
-									UX, and web development.
-								</p>
-							</Row>
-							{/* <Row
+					<Row>
+						<Title>Jorge Giovannetti</Title>
+						<Suspense fallback={CustomSpin}>
+							<GioProfilePic></GioProfilePic>
+							<Text>
+								2nd year CS student @ Tec de Monterrey. My main areas of
+								interest include computer graphics, artificial intelligence, UX,
+								and web development.
+							</Text>
+						</Suspense>
+					</Row>
+					{/* <Row
 						style={{
 							display: "flex"
 						}}
@@ -79,8 +100,77 @@ class AboutPage extends Component {
 						Github
 						</Button>
 					</Row> */}
-						</Content>
-					</Layout>
+					<div>
+						<PageHeader title="Work Experience"></PageHeader>
+						<Tabs tabPosition="left">
+							<TabPane tab="Banorte" key="1">
+								<PageHeader
+									title="Lead UX/UI Designer"
+									subTitle="Jan 2020-Current"
+								>
+									<Content>
+										<div className="content">
+											<Paragraph>
+												Ant Design interprets the color system into two levels:
+												a system-level color system and a product-level color
+												system.
+											</Paragraph>
+											<Paragraph>
+												Ant Design's design team preferred to design with the
+												HSB color model, which makes it easier for designers to
+												have a clear psychological expectation of color when
+												adjusting colors,:well as facilitate communication in
+												teams.
+											</Paragraph>
+										</div>
+									</Content>
+								</PageHeader>
+							</TabPane>
+							<TabPane tab="Google" key="2">
+								<PageHeader
+									title="Software Engineer Intern"
+									subTitle="Jun-Aug 2020"
+								>
+									<Content>
+										<div className="content">
+											<Paragraph>
+												Ant Design interprets the color system into two levels:
+												a system-level color system and a product-level color
+												system.
+											</Paragraph>
+											<Paragraph>
+												Ant Design's design team preferred to design with the
+												HSB color model, which makes it easier for designers to
+												have a clear psychological expectation of color when
+												adjusting colors,:well as facilitate communication in
+												teams.
+											</Paragraph>
+										</div>
+									</Content>
+								</PageHeader>
+							</TabPane>
+							<TabPane tab="ITESM" key="3">
+								<PageHeader title="UX Designer" subTitle="@ Tec de Monterrey">
+									<Content>
+										<div className="content">
+											<Paragraph>
+												Ant Design interprets the color system into two levels:
+												a system-level color system and a product-level color
+												system.
+											</Paragraph>
+											<Paragraph>
+												Ant Design's design team preferred to design with the
+												HSB color model, which makes it easier for designers to
+												have a clear psychological expectation of color when
+												adjusting colors,:well as facilitate communication in
+												teams.
+											</Paragraph>
+										</div>
+									</Content>
+								</PageHeader>
+							</TabPane>
+						</Tabs>
+					</div>
 				</div>
 			</Fragment>
 		);
