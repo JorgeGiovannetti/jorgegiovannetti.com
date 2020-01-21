@@ -1,5 +1,5 @@
 import React, { Component, Fragment, Suspense } from "react";
-import { Row, PageHeader, Typography, Spin, Icon, Tabs } from "antd";
+import { Row, Col, PageHeader, Typography, Spin, Icon, Tabs } from "antd";
 // import GioNavbar from "../../components/gionavbar";
 // import { Button } from "antd";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,13 +10,15 @@ import { Row, PageHeader, Typography, Spin, Icon, Tabs } from "antd";
 // } from "@fortawesome/free-brands-svg-icons";
 
 const GioProfilePic = React.lazy(() => import("./components/GioProfilePic"));
-const { Title, Text } = Typography;
+const { Title } = Typography;
 const { TabPane } = Tabs;
 const CustomSpin = (
 	<Spin
 		indicator={<Icon type="loading" style={{ fontSize: 24 }} spin />}
 	></Spin>
 );
+const isMobile = false;
+const tabPosition = isMobile ? "top" : "left";
 
 const { Paragraph } = Typography;
 
@@ -49,16 +51,21 @@ class AboutPage extends Component {
 						paddingRight: "10%"
 					}}
 				>
+					<Title>Jorge Giovannetti</Title>
 					<Row>
-						<Title>Jorge Giovannetti</Title>
-						<Suspense fallback={CustomSpin}>
-							<GioProfilePic></GioProfilePic>
-							<Text>
+						<Col span={12}>
+							<PageHeader title="About Me"></PageHeader>
+							<Paragraph>
 								2nd year CS student @ Tec de Monterrey. My main areas of
 								interest include computer graphics, artificial intelligence, UX,
 								and web development.
-							</Text>
-						</Suspense>
+							</Paragraph>
+						</Col>
+						<Col span={12}>
+							<Suspense fallback={CustomSpin}>
+								<GioProfilePic></GioProfilePic>
+							</Suspense>
+						</Col>
 					</Row>
 					{/* <Row
 						style={{
@@ -102,7 +109,7 @@ class AboutPage extends Component {
 					</Row> */}
 					<div>
 						<PageHeader title="Work Experience"></PageHeader>
-						<Tabs tabPosition="left">
+						<Tabs tabPosition={tabPosition}>
 							<TabPane tab="Banorte" key="1">
 								<PageHeader
 									title="Lead UX/UI Designer"
