@@ -29,18 +29,22 @@ class WorkExperience extends Component {
 		return (
 			<Tabs tabPosition={tabPosition}>
 				<TabPane tab="Banorte" key="1">
-					<PageHeader title="Lead UX/UI Designer" subTitle="Jan 2020-Current">
+					<PageHeader title="Web Developer" subTitle="Jan 2020-Current">
 						<Content>
 							<div className="content">
 								<Paragraph>
-									Ant Design interprets the color system into two levels: a
-									system-level color system and a product-level color system.
+									Designed and implemented modern and responsive UI for a web
+									platform.
 								</Paragraph>
 								<Paragraph>
-									Ant Design's design team preferred to design with the HSB
-									color model, which makes it easier for designers to have a
-									clear psychological expectation of color when adjusting
-									colors,:well as facilitate communication in teams.
+									Worked with MySQL and React to develop an in-house web
+									dashboard that handles data from three different legacy
+									systems and unifies them into a single, user-friendly
+									experience.
+								</Paragraph>
+								<Paragraph>
+									Documented the software design and worked closely with the
+									Cybersecurity department on the design process.
 								</Paragraph>
 							</div>
 						</Content>
@@ -51,14 +55,18 @@ class WorkExperience extends Component {
 						<Content>
 							<div className="content">
 								<Paragraph>
-									Ant Design interprets the color system into two levels: a
-									system-level color system and a product-level color system.
+									Worked on optimization of processes within the team, achieving
+									an average of 16% speedup through the use of parallel
+									processing.
 								</Paragraph>
 								<Paragraph>
-									Ant Design's design team preferred to design with the HSB
-									color model, which makes it easier for designers to have a
-									clear psychological expectation of color when adjusting
-									colors,:well as facilitate communication in teams.
+									Ran unit-tests and benchmarks on different increments of the
+									project.
+								</Paragraph>
+								<Paragraph>
+									Collaborated with Google's ML team to enhance youtube's
+									recommendation system and improve GoogleAds' economical
+									performance.
 								</Paragraph>
 							</div>
 						</Content>
@@ -69,14 +77,12 @@ class WorkExperience extends Component {
 						<Content>
 							<div className="content">
 								<Paragraph>
-									Ant Design interprets the color system into two levels: a
-									system-level color system and a product-level color system.
+									Designed and developed a website that allows students to
+									schedule tutoring with their teachers.
 								</Paragraph>
 								<Paragraph>
-									Ant Design's design team preferred to design with the HSB
-									color model, which makes it easier for designers to have a
-									clear psychological expectation of color when adjusting
-									colors,:well as facilitate communication in teams.
+									Worked on a MERN (MongoDB, Express, React, Node) stack to
+									develop a web application for my community.
 								</Paragraph>
 							</div>
 						</Content>
