@@ -84,6 +84,10 @@ class WorkExperience extends Component {
 									schedule tutoring with their teachers.
 								</Paragraph>
 								<Paragraph>
+									Ran UX research through the use of focus groups, A/B testing,
+									prototyping, and surveys.
+								</Paragraph>
+								<Paragraph>
 									Worked on a MERN (MongoDB, Express, React, Node) stack to
 									develop a web application for my community.
 								</Paragraph>
