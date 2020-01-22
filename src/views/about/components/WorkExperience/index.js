@@ -4,8 +4,8 @@ import { Row, PageHeader, Tabs, Typography } from "antd";
 const { Paragraph } = Typography;
 const { TabPane } = Tabs;
 
-const isMobile = false;
-const tabPosition = isMobile ? "top" : "left";
+// const isMobile = true;
+// const tabPosition = isMobile ? "top" : "left";
 
 const Content = ({ children, extraContent }) => {
 	return (
@@ -27,7 +27,7 @@ const Content = ({ children, extraContent }) => {
 class WorkExperience extends Component {
 	render() {
 		return (
-			<Tabs tabPosition={tabPosition}>
+			<Tabs tabPosition={window.innerWidth < 640 ? "top" : "left"}>
 				<TabPane tab="Banorte" key="1">
 					<PageHeader
 						title="Systems Security Program"
