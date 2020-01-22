@@ -29,7 +29,10 @@ class WorkExperience extends Component {
 		return (
 			<Tabs tabPosition={tabPosition}>
 				<TabPane tab="Banorte" key="1">
-					<PageHeader title="Web Developer" subTitle="Jan 2020-Current">
+					<PageHeader
+						title="Systems Security Program"
+						subTitle="Jan 2020-Present"
+					>
 						<Content>
 							<div className="content">
 								<Paragraph>
