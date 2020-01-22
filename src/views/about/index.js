@@ -46,7 +46,7 @@ class AboutPage extends Component {
 							<GioProfilePic></GioProfilePic>
 						</Col>
 					</Row>
-					<Row type="flex">
+					<Row type="flex" style={{ marginTop: "5px" }}>
 						<Button
 							href="https://www.linkedin.com/in/jorgegiovannetti/"
 							rel="noopener"
