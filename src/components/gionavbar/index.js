@@ -11,7 +11,6 @@ class GioNavbar extends Component {
 		return (
 			<Menu
 				// theme="dark"
-				style={{ background: "#0a192f" }}
 				onClick={this.handleClick}
 				selectedKeys={[pathname]}
 				mode="horizontal"
