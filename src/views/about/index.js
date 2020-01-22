@@ -46,7 +46,7 @@ class AboutPage extends Component {
 							<GioProfilePic></GioProfilePic>
 						</Col>
 					</Row>
-					<div>
+					<Row type="flex">
 						<Button
 							href="https://www.linkedin.com/in/jorgegiovannetti/"
 							rel="noopener"
@@ -72,7 +72,7 @@ class AboutPage extends Component {
 							<SocialIcon icon={faGithub} />
 							Github
 						</Button>
-					</div>
+					</Row>
 					<PageHeader title="Work Experience"></PageHeader>
 					<Suspense fallback={<Skeleton active />}>
 						<WorkExperience></WorkExperience>
