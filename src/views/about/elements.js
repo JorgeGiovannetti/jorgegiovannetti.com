@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SpotifyButton = styled(Button)`
 	background: green;
+	margin-right: 5px;
+	margin-left: 5px;
 `;
 
 const SocialIcon = styled(FontAwesomeIcon)`
