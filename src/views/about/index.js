@@ -19,8 +19,8 @@ class AboutPage extends Component {
 			<Fragment>
 				<div
 					style={{
-						minHeight: "100vh",
-						maxHeight: "100vh",
+						// minHeight: "100vh",
+						// maxHeight: "100vh",
 						padding: "5% 10px 10px 5%"
 					}}
 				>
