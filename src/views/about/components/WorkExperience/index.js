@@ -9,7 +9,7 @@ const { TabPane } = Tabs;
 
 const Content = ({ children, extraContent }) => {
 	return (
-		<Row className="content" type="flex">
+		<Row type="flex">
 			<div className="main" style={{ flex: 1 }}>
 				{children}
 			</div>
@@ -34,7 +34,7 @@ class WorkExperience extends Component {
 						subTitle="Jan 2020-Present"
 					>
 						<Content>
-							<div className="content">
+							<div style={{ minWidth: "200px" }}>
 								<Paragraph>
 									Designed and implemented modern and responsive UI for a web
 									platform.
@@ -56,7 +56,7 @@ class WorkExperience extends Component {
 				<TabPane tab="Google" key="2">
 					<PageHeader title="Software Engineer Intern" subTitle="Jun-Aug 2020">
 						<Content>
-							<div className="content">
+							<div style={{ minWidth: "200px" }}>
 								<Paragraph>
 									Worked on optimization of processes within the team, achieving
 									an average of 16% speedup through the use of parallel
@@ -78,7 +78,7 @@ class WorkExperience extends Component {
 				<TabPane tab="ITESM" key="3">
 					<PageHeader title="UX Designer" subTitle="@ Tec de Monterrey">
 						<Content>
-							<div className="content">
+							<div style={{ minWidth: "200px" }}>
 								<Paragraph>
 									Designed and developed a website that allows students to
 									schedule tutoring with their teachers.
