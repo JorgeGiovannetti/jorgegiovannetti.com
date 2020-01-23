@@ -20,6 +20,7 @@ class AboutPage extends Component {
 				<div
 					style={{
 						minHeight: "100vh",
+						maxHeight: "100vh",
 						padding: "5% 10px 10px 5%"
 					}}
 				>
