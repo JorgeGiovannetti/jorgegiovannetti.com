@@ -8,7 +8,7 @@ class GioProfilePic extends Component {
 				src={ProfilePic}
 				style={{
 					borderRadius: "50%",
-					maxHeight: "250px"
+					maxHeight: "200px"
 				}}
 				alt="Profile"
 			/>
