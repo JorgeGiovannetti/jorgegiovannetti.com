@@ -1,5 +1,5 @@
 import React, { Component, Fragment, Suspense } from "react";
-import { Row, Col, PageHeader, Typography, Skeleton } from "antd";
+import { Row, Col, PageHeader, Typography, Skeleton, Layout } from "antd";
 import GioProfilePic from "./components/GioProfilePic";
 import { Button } from "antd";
 import {
@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { SpotifyButton, SocialIcon } from "./elements";
 
+const { Footer } = Layout;
 const WorkExperience = React.lazy(() => import("./components/WorkExperience"));
 const Projects = React.lazy(() => import("./components/Projects"));
 const { Title, Paragraph } = Typography;
@@ -19,17 +20,18 @@ class AboutPage extends Component {
 			<Fragment>
 				<div
 					style={{
-						height: "100vh",
-						paddingLeft: "10%",
-						paddingRight: "10%"
+						minHeight: "100vh",
+						padding: "5% 10px 10px 5%"
 					}}
 				>
-					<Title>Jorge Giovannetti</Title>
+					<Title style={{ marginLeft: "5%", fontSize: "50px" }}>
+						Jorge Giovannetti
+					</Title>
 					<div style={{ marginLeft: "5%" }}>
-						<PageHeader title="About Me"></PageHeader>
 						<Row type="flex">
-							<Col span={12}>
-								<Paragraph>
+							<Col span={18}>
+								<PageHeader title="About Me"></PageHeader>
+								<Paragraph style={{ fontSize: "18px" }}>
 									2nd year CS student @ Tec de Monterrey. My main areas of
 									interest include computer graphics, artificial intelligence,
 									UX, and web development.
@@ -44,7 +46,7 @@ class AboutPage extends Component {
 									</Button>
 								</Row>
 							</Col>
-							<Col span={12}>
+							<Col span={6}>
 								<GioProfilePic></GioProfilePic>
 							</Col>
 						</Row>
@@ -85,6 +87,7 @@ class AboutPage extends Component {
 						<Projects></Projects>
 					</Suspense>
 				</div>
+				<Footer></Footer>
 			</Fragment>
 		);
 	}
