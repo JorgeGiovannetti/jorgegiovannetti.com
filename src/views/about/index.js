@@ -10,6 +10,7 @@ import {
 import { SpotifyButton, SocialIcon } from "./elements";
 
 const WorkExperience = React.lazy(() => import("./components/WorkExperience"));
+const Projects = React.lazy(() => import("./components/Projects"));
 const { Title, Paragraph } = Typography;
 
 class AboutPage extends Component {
@@ -78,6 +79,10 @@ class AboutPage extends Component {
 					<PageHeader title="Work Experience"></PageHeader>
 					<Suspense fallback={<Skeleton active />}>
 						<WorkExperience></WorkExperience>
+					</Suspense>
+					<PageHeader title="Recent Projects"></PageHeader>
+					<Suspense fallback={<Skeleton active />}>
+						<Projects></Projects>
 					</Suspense>
 				</div>
 			</Fragment>
