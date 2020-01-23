@@ -87,7 +87,6 @@ class AboutPage extends Component {
 						<Projects></Projects>
 					</Suspense>
 				</div>
-				<Footer></Footer>
 			</Fragment>
 		);
 	}
