@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProfilePic from "./GioProfilePic.jpg";
+import ProfilePic from "./GioProfilePic200px.webp";
 
 class GioProfilePic extends Component {
 	render() {
@@ -7,8 +7,8 @@ class GioProfilePic extends Component {
 			<img
 				src={ProfilePic}
 				style={{
-					borderRadius: "50%",
-					maxHeight: "200px"
+					borderRadius: "50%"
+					// maxHeight: "200px"
 				}}
 				alt="Profile"
 			/>

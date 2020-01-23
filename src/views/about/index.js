@@ -1,5 +1,5 @@
 import React, { Component, Fragment, Suspense } from "react";
-import { Row, Col, PageHeader, Typography, Skeleton, Layout } from "antd";
+import { Row, Col, PageHeader, Typography, Skeleton } from "antd";
 import GioProfilePic from "./components/GioProfilePic";
 import { Button } from "antd";
 import {
@@ -9,7 +9,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { SpotifyButton, SocialIcon } from "./elements";
 
-const { Footer } = Layout;
 const WorkExperience = React.lazy(() => import("./components/WorkExperience"));
 const Projects = React.lazy(() => import("./components/Projects"));
 const { Title, Paragraph } = Typography;
