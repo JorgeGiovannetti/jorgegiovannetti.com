@@ -9,7 +9,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { SpotifyButton, SocialIcon } from "./elements";
 
-const WorkExperience = React.lazy(() => import("./components/WorkExperience"));
 const Projects = React.lazy(() => import("./components/Projects"));
 const { Title, Paragraph } = Typography;
 
@@ -17,18 +16,12 @@ class AboutPage extends Component {
 	render() {
 		return (
 			<Fragment>
-				<div
-					style={{
-						// minHeight: "100vh",
-						// maxHeight: "100vh",
-						padding: "5% 10px 10px 5%"
-					}}
-				>
+				<div style={{ padding: "5% 10px 10px 5%" }}>
 					<Title style={{ marginLeft: "5%", fontSize: "50px" }}>
 						Jorge Giovannetti
 					</Title>
 					<div style={{ marginLeft: "5%" }}>
-						<Row type="flex">
+						<Row type="flex" style={{ flexWrap: "true" }}>
 							<Col span={18}>
 								<PageHeader title="About Me"></PageHeader>
 								<Paragraph style={{ fontSize: "18px" }}>
@@ -78,10 +71,6 @@ class AboutPage extends Component {
 							</Button>
 						</Row>
 					</div>
-					<PageHeader title="Work Experience"></PageHeader>
-					<Suspense fallback={<Skeleton active />}>
-						<WorkExperience></WorkExperience>
-					</Suspense>
 					<PageHeader title="Recent Projects"></PageHeader>
 					<Suspense fallback={<Skeleton active />}>
 						<Projects></Projects>
