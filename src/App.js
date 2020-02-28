@@ -3,6 +3,7 @@ import { Redirect, Route, Switch, BrowserRouter } from "react-router-dom";
 import PortfolioPage from "./views/portfolio";
 import AboutPage from "./views/about";
 import NotFoundPage from "./views/notfound";
+import "./App.css";
 
 const App = () => {
 	return (

@@ -1896,10 +1896,10 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd@^3.26.6:
-  version "3.26.6"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-3.26.6.tgz#7e583e11e757679ca6d2fda0bc418a177f5d3653"
-  integrity sha512-GgDiGjY/DooqpPxcWSMk8Xhj6hF1KuyIHzFZ/BgjpaXF+Ca9MKHch8Vmo5yuUPiXekbaOyoKaZj8g/Z2Tr3Lxg==
+antd@^3.26.12:
+  version "3.26.12"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-3.26.12.tgz#2f075670780ac0490b2945d8bca883edcd93158c"
+  integrity sha512-aXiRDDpDx1jH/gKJDE2dgZPT1C7qurOZ1OSt9RklQT2K6CFlveF8HJY7Jz1/xHikXA+kmy6kr/OACJiaxBFRkA==
   dependencies:
     "@ant-design/create-react-context" "^0.2.4"
     "@ant-design/icons" "~2.1.1"
@@ -9305,6 +9305,13 @@ react-slick@~0.25.2:
     json2mq "^0.2.0"
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
+
+react-social-icons@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-4.1.0.tgz#d8c1f846783cba15ae0e75704377bc67805f4c20"
+  integrity sha512-wbwSbyS4QWjpL6U+GFZDBrE5Ao8px0QkRgo0XkxDHF2LNRsFNErSDnIPKiowhQ7t7IyrSA2HYrEw7ETgpVTg+Q==
+  dependencies:
+    prop-types "^15.6.2"
 
 react@^16.11.0:
   version "16.12.0"
