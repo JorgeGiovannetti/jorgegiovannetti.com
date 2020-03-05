@@ -11,7 +11,14 @@ class AboutPage extends Component {
 	render() {
 		return (
 			<Fragment>
-				<div style={{ padding: "5% 10px 10px 5%" }}>
+				<div
+					style={{
+						marginTop: 20,
+						maxWidth: 1100,
+						marginLeft: "auto",
+						marginRight: "auto"
+					}}
+				>
 					<Title style={{ marginLeft: "5%", fontSize: "50px" }}>
 						Jorge Giovannetti
 					</Title>
