@@ -6,7 +6,7 @@ import { ApolloProvider } from "react-apollo";
 const client = new ApolloClient({
 	uri: "https://api.github.com/graphql",
 	headers: {
-		authorization: `Bearer ${process.env.REACT_GITHUB_API_KEY}`
+		authorization: `Bearer ${process.env.REACT_APP_GITHUB_API_KEY}`
 	}
 });
 
@@ -37,13 +37,13 @@ const getRepos = gql`
 class Projects extends Component {
 	async componentDidMount() {
 		const repos = await client.query({ query: getRepos });
-		console.log(repos);
+		console.log(repos.data.viewer.repositories.edges);
 	}
 
 	render() {
 		return (
 			<ApolloProvider client={client}>
-				<div style={{ marginBottom: "15px" }}>Projectinos</div>
+				<div style={{ marginBottom: "15px" }}></div>
 			</ApolloProvider>
 		);
 	}
