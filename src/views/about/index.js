@@ -1,5 +1,5 @@
 import React, { Component, Fragment, Suspense } from "react";
-import { Row, Col, PageHeader, Typography, Skeleton } from "antd";
+import { Row, PageHeader, Typography, Skeleton } from "antd";
 import GioProfilePic from "./components/GioProfilePic";
 import Social from "../../components/social";
 import { Button } from "antd";
@@ -24,27 +24,28 @@ class AboutPage extends Component {
 					</Title>
 					<div style={{ marginLeft: "5%" }}>
 						<Row type="flex" style={{ flexWrap: "true" }}>
-							<Col span={18}>
+							<div>
 								<PageHeader title="About Me"></PageHeader>
 								<Paragraph style={{ fontSize: "18px" }}>
-									2nd year CS student @ Tec de Monterrey. My main areas of
-									interest include computer graphics, artificial intelligence,
-									UX, and web development.
+									I'm a 2nd year Computer Science student at Tec de Monterrey
+									with a passion for learning and experimenting. My main areas
+									of interest include UX, artificial intelligence, and videogame
+									development.
 								</Paragraph>
 								<Social />
-								<Row type="flex">
-									<Button
-										href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
-										target="_blank"
-										rel="noopener"
-									>
-										Resume
-									</Button>
-								</Row>
-							</Col>
-							<Col span={6}>
+							</div>
+							<div>
 								<GioProfilePic></GioProfilePic>
-							</Col>
+							</div>
+						</Row>
+						<Row type="flex">
+							<Button
+								href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
+								target="_blank"
+								rel="noopener"
+							>
+								Resume
+							</Button>
 						</Row>
 					</div>
 					<PageHeader title="Recent Projects"></PageHeader>
