@@ -19,6 +19,16 @@ const SocialIcon = styled(SocIc)`
 		margin-bottom: 10px;
 		margin-right: 10px;
 	}
+
+	&:active {
+		background-color: #e5e5e5;
+		border-radius: 50%;
+		box-shadow: 0 0 0 4px #e5e5e5;
+		height: 45px !important;
+		width: 45px !important;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
 `;
 
 export { SocialIcon };
