@@ -14,7 +14,7 @@ class AboutPage extends Component {
 				<div
 					style={{
 						marginTop: 20,
-						maxWidth: 1100,
+						maxWidth: 1080,
 						marginLeft: "auto",
 						marginRight: "auto"
 					}}
