@@ -55,9 +55,9 @@ class Projects extends Component {
 		return (
 			<ApolloProvider client={client}>
 				<div style={{ marginBottom: "15px" }}>
-					<RepoCard
-						data={this.state.repos.data.viewer.repositories.edges[0]}
-					></RepoCard>
+					{this.state.repos.data.viewer.repositories.edges.map(repo => (
+						<RepoCard data={repo} key={repo.node.name} />
+					))}
 				</div>
 			</ApolloProvider>
 		);
