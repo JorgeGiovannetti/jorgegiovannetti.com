@@ -14,7 +14,7 @@ const RepoCard = ({ data }) => {
 				minHeight: 200,
 				maxHeight: 200,
 				borderRadius: 20,
-				boxShadow: "0px 0px 5px 1px rgba(0,0,0,0.2)",
+				boxShadow: "0px 0px 8px 1px rgba(0,0,0,0.2)",
 				display: "flex",
 				flexDirection: "column",
 				justifyContent: "space-between"
