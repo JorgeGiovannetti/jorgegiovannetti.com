@@ -4,8 +4,12 @@ const LanguageTag = ({ tag }) => {
 	return (
 		<div
 			style={{
+				margin: 10,
+				padding: 5,
 				color: "white",
-				backgroundColor: tag.node.color
+				fontWeight: "bold",
+				backgroundColor: tag.node.color,
+				borderRadius: 6
 			}}
 		>
 			{tag.node.name}
