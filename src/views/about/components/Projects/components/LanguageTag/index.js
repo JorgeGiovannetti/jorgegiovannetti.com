@@ -1,19 +1,17 @@
 import React from "react";
+import { Tag } from "antd";
 
 const LanguageTag = ({ tag }) => {
 	return (
-		<div
+		<Tag
+			color={tag.node.color}
 			style={{
 				margin: 10,
-				padding: 5,
-				color: "white",
-				fontWeight: "bold",
-				backgroundColor: tag.node.color,
-				borderRadius: 6
+				fontWeight: "bold"
 			}}
 		>
 			{tag.node.name}
-		</div>
+		</Tag>
 	);
 };
 
