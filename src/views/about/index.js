@@ -19,34 +19,34 @@ class AboutPage extends Component {
 						marginRight: "auto"
 					}}
 				>
-					<Title style={{ marginLeft: "5%", fontSize: "50px" }}>
-						Jorge Giovannetti
-					</Title>
-					<div style={{ marginLeft: "5%" }}>
-						<Row type="flex" style={{ flexWrap: "true" }}>
-							<div>
-								<PageHeader title="About Me"></PageHeader>
-								<Paragraph style={{ fontSize: "18px" }}>
-									I'm a 2nd year Computer Science student at Tec de Monterrey
-									with a passion for learning and experimenting. My main areas
-									of interest include UX, artificial intelligence, and videogame
-									development.
-								</Paragraph>
-								<Social />
-							</div>
-							<div>
-								<GioProfilePic></GioProfilePic>
-							</div>
-						</Row>
-						<Row type="flex">
-							<Button
-								href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
-								target="_blank"
-								rel="noopener"
-							>
-								Resume
-							</Button>
-						</Row>
+					<Title style={{ fontSize: "50px" }}>Jorge Giovannetti</Title>
+					<PageHeader title="About Me"></PageHeader>
+					<div
+						style={{
+							display: "flex",
+							flexDirection: "column",
+							alignItems: "center"
+						}}
+					>
+						<div>
+							<Paragraph style={{ fontSize: "18px" }}>
+								I'm a 2nd year Computer Science student at Tec de Monterrey with
+								a passion for learning and experimenting. My main areas of
+								interest include UX, artificial intelligence, and videogame
+								development.
+							</Paragraph>
+						</div>
+						<Social />
+						<GioProfilePic></GioProfilePic>
+						<Button
+							href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
+							target="_blank"
+							rel="noopener"
+							style={{ marginTop: 10 }}
+							type="primary"
+						>
+							Resume
+						</Button>
 					</div>
 					<PageHeader title="Recent Projects"></PageHeader>
 					<Suspense fallback={<Skeleton active />}>
