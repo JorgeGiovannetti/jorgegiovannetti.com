@@ -1,5 +1,5 @@
 import React, { Component, Fragment, Suspense } from "react";
-import { Row, PageHeader, Typography, Skeleton } from "antd";
+import { PageHeader, Typography, Skeleton } from "antd";
 import GioProfilePic from "./components/GioProfilePic";
 import Social from "../../components/social";
 import { Button } from "antd";
@@ -13,7 +13,8 @@ class AboutPage extends Component {
 			<Fragment>
 				<div
 					style={{
-						marginTop: 20,
+						paddingTop: 40,
+						paddingBottom: 40,
 						maxWidth: 1080,
 						marginLeft: "auto",
 						marginRight: "auto"

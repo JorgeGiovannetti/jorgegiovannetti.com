@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ApolloClient, { gql } from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import RepoCard from "./components/RepoCard";
 import { Skeleton } from "antd";
+import RepoTable from "./components/RepoTable";
 
 const client = new ApolloClient({
 	uri: "https://api.github.com/graphql",
@@ -38,13 +38,26 @@ const getRepos = gql`
 class Projects extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { repos: null };
+		this.state = { repos: null, tableData: null };
 	}
 
 	async componentDidMount() {
 		const repos = await client.query({ query: getRepos });
-		this.setState({ repos: repos });
-		console.log(this.state.repos.data.viewer.repositories.edges[0]);
+		this.setState({ repos: repos.data.viewer.repositories.edges });
+		console.log(this.state.repos);
+		const tData = [];
+		for (let i = 0; i < this.state.repos.length; i++) {
+			let tObj = {
+				key: i,
+				name: this.state.repos[i].node.name,
+				description: this.state.repos[i].node.description,
+				languages: this.state.repos[i].node.languages,
+				link: this.state.repos[i].node.url
+			};
+			tData.push(tObj);
+		}
+		this.setState({ tableData: tData });
+		console.log(this.state.tableData);
 	}
 
 	render() {
@@ -63,9 +76,7 @@ class Projects extends Component {
 						flexWrap: "wrap"
 					}}
 				>
-					{this.state.repos.data.viewer.repositories.edges.map(repo => (
-						<RepoCard data={repo} key={repo.node.name} />
-					))}
+					<RepoTable dataSource={this.state.tableData} />
 				</div>
 			</ApolloProvider>
 		);
