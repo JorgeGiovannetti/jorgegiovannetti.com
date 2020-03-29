@@ -16,8 +16,8 @@ class AboutPage extends Component {
 						paddingTop: 40,
 						paddingBottom: 40,
 						maxWidth: 1080,
-						marginLeft: "auto",
-						marginRight: "auto"
+						paddingLeft: "auto",
+						paddingRight: "auto"
 					}}
 				>
 					<Title style={{ fontSize: "50px" }}>Jorge Giovannetti</Title>
