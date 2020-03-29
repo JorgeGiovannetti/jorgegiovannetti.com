@@ -37,8 +37,8 @@ class AboutPage extends Component {
 								development.
 							</Paragraph>
 						</div>
-						<Social />
 						<GioProfilePic></GioProfilePic>
+						<Social />
 						<Button
 							href="https://drive.google.com/file/d/1gANwTHqRcKbsLY0w4doSW7wEBnkEyWAH/view?usp=drive_open"
 							target="_blank"
