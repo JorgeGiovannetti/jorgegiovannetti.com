@@ -13,11 +13,11 @@ class AboutPage extends Component {
 			<Fragment>
 				<div
 					style={{
-						paddingTop: 40,
-						paddingBottom: 40,
+						marginTop: 40,
+						marginBottom: 40,
 						maxWidth: 1080,
-						paddingLeft: "auto",
-						paddingRight: "auto"
+						marginLeft: "auto",
+						marginRight: "auto"
 					}}
 				>
 					<Title style={{ fontSize: "50px" }}>Jorge Giovannetti</Title>
