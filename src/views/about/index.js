@@ -15,7 +15,7 @@ class AboutPage extends Component {
 					style={{
 						marginTop: 40,
 						marginBottom: 40,
-						maxWidth: 1080,
+						maxWidth: '80%',
 						marginLeft: "auto",
 						marginRight: "auto"
 					}}
@@ -31,7 +31,7 @@ class AboutPage extends Component {
 					>
 						<div>
 							<Paragraph style={{ fontSize: "18px" }}>
-								I'm a 2nd year Computer Science student at Tec de Monterrey with
+								I'm a 3rd year Computer Science student at Tec de Monterrey with
 								a passion for learning and experimenting. My main areas of
 								interest include UX, artificial intelligence, and videogame
 								development.
