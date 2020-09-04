@@ -1,8 +1,10 @@
+const config = require('./src/config.js');
+
 module.exports = {
   siteMetadata: {
-    title: `Jorge Giovannetti`,
-    description: `My personal portfolio`,
-    author: `@jorgegiovannetti`,
+    title: config.siteTitle,
+    siteUrl: config.siteUrl,
+    description: config.siteDescription,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,8 +23,8 @@ module.exports = {
         name: `JorgeGiovannetti`,
         short_name: `JorgeGiovannetti`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: config.colors.white,
+        theme_color: config.colors.green,
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
       },
