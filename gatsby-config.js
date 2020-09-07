@@ -3,8 +3,10 @@ const config = require('./src/config.js');
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
-    siteUrl: config.siteUrl,
+    author: config.author,    
     description: config.siteDescription,
+    siteUrl: config.siteUrl,
+    
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +16,9 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

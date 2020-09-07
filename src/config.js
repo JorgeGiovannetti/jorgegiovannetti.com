@@ -1,11 +1,12 @@
 module.exports = {
     siteTitle: 'Jorge Giovannetti',
     siteDescription:
-        'Brittany Chiang is a software engineer based in Boston, MA who specializes in building (and occasionally designing) exceptional websites, applications, and everything in between.',
+        'Jorge Giovannetti is a Computer Science student @ Tec de Monterrey and full-stack developer with a passion for learning and experimenting.',
     siteKeywords:
         'Jorge Giovannetti, Jorge, Giovannetti, JorgeGiovannetti, Tec de Monterrey',
     siteUrl: 'https://jorgegiovannetti.com',
     siteLanguage: 'en_US',
+    author: 'Jorge Giovannetti',
     name: 'Jorge Giovannetti',
     github: 'https://github.com/JorgeGiovannetti',
     socialMedia: [
@@ -21,5 +22,5 @@ module.exports = {
     colors: {
         white: '#FCFCFB',
         green: '#66A375',
-      },
+    },
 };
