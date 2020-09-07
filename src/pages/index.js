@@ -1,21 +1,34 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import styled from 'styled-components';
+import theme from '../styles/theme';
+import media from '../styles/media';
+import Layout from '../components/layout';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const HeroTitle = styled.h1`
+  font-size: 84px;
+  ${media.desktop`font-size: 72px;`};
+  ${media.tablet`font-size: 60px;`};
+  ${media.phablet`font-size: 48px;`};
+  ${media.phone`font-size: 36px;`};
+  margin-top: 0;
+`;
+
+const HeroSub = styled.h2`
+  font-size: 44px;
+  ${media.desktop`font-size: 36px;`};
+  ${media.tablet`font-size: 28px;`};
+  ${media.phablet`font-size: 20px;`};
+  ${media.phone`font-size: 14px;`};
+  color: ${theme.colors.green};
+  margin-bottom: 0;
+`;
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h2>Hello world, I'm</h2>
-    <h1>Jorge Giovannetti</h1>
-    <p>I'm a Computer Science student @ Tec de Monterrey with a passion for learning and experimenting.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/projects/">My projects</Link> <br />
+    <HeroSub> Hello world, I'm</HeroSub>
+    <HeroTitle>Jorge Giovannetti</HeroTitle>
+    <h3 style={{maxWidth: '80%'}}>I'm a Computer Science student @ Tec de Monterrey with a passion for learning and experimenting.</h3>
   </Layout>
-)
+);
 
 export default IndexPage;

@@ -1,14 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import Layout from '../components/layout';
 
 const Projects = () => (
   <Layout>
-    <SEO title="My projects" />
     <h1>My projects</h1>
-    <p>Welcome to my projects</p>
-    <Link to="/">Go back to the homepage</Link>
+    <p>Here are a few of my projects:</p>
   </Layout>
 )
 
