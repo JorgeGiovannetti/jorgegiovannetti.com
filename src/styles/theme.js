@@ -4,24 +4,24 @@ const theme = {
         green: '#66A375',
         lightGreen: '#80B38C',
         blue: '#3885A8',
-        lightBlue: '479BC2',
-        brown: '#352B26',
+        lightBlue: '#479BC2',
+        brown: '#3B312B',
         lightBrown: '#41382E'
     },
 
     fonts: {
-        Calibre:
-            'Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif',
-        SFMono: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace',
+        headers: 'Ramabhadra, Open Sans, sans-serif',
+        content: 'Roboto, Arial, sans-serif',
     },
 
     fontSizes: {
-        xs: '12px',
-        sm: '14px',
-        md: '16px',
-        lg: '18px',
-        xl: '20px',
-        xxl: '22px'
+        s: '14px',
+        m: '18px',
+        l: '24px',
+        xl: '28px',
+        xxl: '32px',
+        heroSub: '36px',
+        heroTitle: '72px'
     },
 };
 
