@@ -18,12 +18,17 @@ const NavLink = styled(Link)`
     text-decoration: none;
     font-family: Ramabhadra, sans-serif;
     color: ${theme.colors.lightBrown};
+    &:hover {
+        background: #f0f0f0;
+    }
 `
+
+const activeNavLink = { border: `solid 2px ${theme.colors.blue}`, borderRadius: '4px' };
 
 const Navbar = () => (
     <NavContainer>
-        <NavLink to="/">About me</NavLink>
-        <NavLink to="/projects/">My projects</NavLink>
+        <NavLink to="/" activeStyle={activeNavLink}>About me</NavLink>
+        <NavLink to="/projects/" activeStyle={activeNavLink}>My projects</NavLink>
     </NavContainer>
 );
 
