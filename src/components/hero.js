@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import media from '../styles/media';
@@ -26,12 +26,27 @@ const HeroSub = styled.h2`
   margin-bottom: 0;
 `;
 
-const HeroSection = () => (
-  <HeroContainer>
-    <HeroSub> Hello world, I'm</HeroSub>
-    <HeroTitle>Jorge Giovannetti</HeroTitle>
-    <h3 style={{maxWidth: '80%'}}>I'm a Computer Science student @ Tec de Monterrey with a passion for learning and experimenting.</h3> 
-  </HeroContainer>
-);
+const HeroSection = () => {
+
+  const [anchorTarget, setAnchorTarget] = useState(null);
+
+  useEffect(() => {
+    setAnchorTarget(document.getElementById('about'));
+  }, []);
+
+  const handleClick = event => {
+    event.preventDefault();
+    anchorTarget.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <HeroContainer>
+      <HeroSub> Hello world, I'm</HeroSub>
+      <HeroTitle>Jorge Giovannetti</HeroTitle>
+      <h3 style={{ maxWidth: '80%' }}>I'm a Computer Science student @ Tec de Monterrey with a passion for learning and experimenting.</h3>
+      <button onClick={handleClick}>Find out more!</button>
+    </HeroContainer>
+  );
+}
 
 export default HeroSection;

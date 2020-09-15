@@ -36,7 +36,7 @@ const IndexPage = () => (
   <Layout>
     <HeroSection />
     <AboutTitle>About Me</AboutTitle>
-    <AboutSection>
+    <AboutSection id='about'>
       <AboutContainer>
           <p>
             My name is Jorge Giovannetti,
