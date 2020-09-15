@@ -43,7 +43,7 @@ const HeroSection = () => {
     <HeroContainer>
       <HeroSub> Hello world, I'm</HeroSub>
       <HeroTitle>Jorge Giovannetti</HeroTitle>
-      <h3 style={{ maxWidth: '80%' }}>I'm a Computer Science student @ Tec de Monterrey with a passion for learning and experimenting.</h3>
+      <h3 style={{ maxWidth: '600px' }}>I'm a Computer Science student @ Tec de Monterrey with a passion for learning and experimenting.</h3>
       <button onClick={handleClick}>Find out more!</button>
     </HeroContainer>
   );
