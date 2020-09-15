@@ -44,9 +44,6 @@ const PageLayout = styled.div`
     grid-template-rows: auto 1fr auto;
 `;
 
-const ContentLayout = styled.div`
-`;
-
 const Layout = ({ children }) => (
     <>
         <GlobalStyles />
